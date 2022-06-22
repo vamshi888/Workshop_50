@@ -6,10 +6,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
   createInnerHtml();
 });
 
+const getContactFromLocalStorage = () => {
+  return localStorage.getItem('ContactList') ? JSON.parse(localStorage.getItem('ContactList')) : [];
+};
+
 const createInnerHtml = () => {
-  if (contactList.length == 0) {
-    return;
-  }
+
   const headerHtml = `<tr>
     <th>Full Name</th>
     <th>Address</th>
@@ -18,8 +20,10 @@ const createInnerHtml = () => {
     <th>Zip Code</th>
     <th>Phone Number</th>
     </tr>`;
-
   let innerHtml = `${headerHtml}`;
+  if (contactList.length == 0) {
+    return;
+  }
   for (let contact of contactList) {
     innerHtml = `${innerHtml} 
         <tr>
@@ -30,17 +34,13 @@ const createInnerHtml = () => {
         <td>${contact._zip}</td>
         <td>${contact._phoneNumber}</td>
         <td>
-            <img src="delete-black-18dp.svg" alt="delete" id="${contact._id}" onclick="remove(this)">
+            <img src="delete-black-18dp.svg" id="${contact._id}" onclick="remove(this)">
             <img src="create-black-18dp.svg" alt="update" id="${contact._id}" onclick="update(this)">
         </td>
         </tr>`;
   }
   document.querySelector("#table-display").innerHTML = innerHtml;
 };
-
-const getContactFromLocalStorage = () =>{
-  return localStorage.getItem('ContactList') ? JSON.parse(localStorage.getItem('ContactList')) : []
-}
 
 const remove = (node) => {
   let removeContact = contactList.find(contact => contact._id == node.id);
@@ -52,5 +52,14 @@ const remove = (node) => {
   localStorage.setItem("ContactList", JSON.stringify(contactList));
   document.querySelector(".contact-count").textContent = contactList.length;
   createInnerHtml();
-  window.location.replace("addressBookHome.html");
+  window.location.replace(site_properties.home_page);
+}
+
+const update = (node) => {
+  let contactToEdit = contactList.find(editContact => editContact._id == node.id);
+  if (!contactToEdit) {
+    return;
+  }
+  localStorage.setItem('contactEdit', JSON.stringify(contactToEdit));
+  window.location.replace(site_properties.add_contacts_page);
 }

@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,500&display=swap"
-    rel="stylesheet"/>
+    rel="stylesheet" />
   <link rel="shortcut icon" href="logo.png">
   <link rel="stylesheet" href="addressBookForm.css">
   <title>Address Book Form</title>
@@ -20,7 +20,7 @@
     <div class="logo-content">
       <img src="logo.png" alt="logo" />
       <div>
-        <span class="addressBook-text">Address</span><br/>
+        <span class="addressBook-text">Address</span><br />
         <span class="addressBook-text addressBook-book">Book</span>
       </div>
     </div>
@@ -39,20 +39,20 @@
         <div class="row-content">
           <label for="name" class="label text">Full Name</label>
           <br>
-          <input type="text" class="input" id="name" name="name" placeholder="Enter Your name..." autocomplete="off" required>
+          <input type="text" class="input" id="name" name="name" placeholder="Enter Your name.." autocomplete="off" required>
           <error-output class="name-error"></error-output>
         </div>
         <div class="row-content">
           <label for="phoneNumber" class="label text">Phone Number</label>
           <br>
-          <input type="tel" class="input" id="phoneNumber" name="phoneNumber" placeholder="Enter Your phone number..."
+          <input type="tel" class="input" id="phoneNumber" name="phoneNumber" placeholder="Enter Your phone number.."
             autocomplete="off" required>
           <error-output class="tel-error"></error-output>
         </div>
         <div class="row-content">
           <label for="address" class="label text">Address</label>
           <br>
-          <textarea name="address" id="address" placeholder="Enter Your address..." autocomplete="off" required></textarea>
+          <textarea name="address" id="address" placeholder="Enter Your address.." autocomplete="off" required></textarea>
           <error-output class="address-error"></error-output>
         </div>
         <div class="row-content">
@@ -63,16 +63,16 @@
               <select name="city" id="city" required>
                 <option selected disabled hidden value="Select City">Select City</option>
                 <option value="Bengaluru">Bengaluru</option>
-                <option value="Chandigarh">Chandigarh</option>
-                <option value="Chennai">Chennai</option>
-                <option value="Delhi">Delhi</option>
-                <option value="Hyderabad">Hyderabad</option>
-                <option value="Jaipur">Jaipur</option>
-                <option value="Kolkata">Kolkata</option>
-                <option value="Lucknow">Lucknow</option>
-                <option value="Panaji">Panaji</option>
-                <option value="Patna">Patna</option>
-                <option value="Mumbai">Mumbai</option>	
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Lucknow">Lucknow</option>
+                        <option value="Panaji">Panaji</option>
+                        <option value="Patna">Patna</option>
+                        <option value="Mumbai">Mumbai</option>	
               </select>
             </div>
             <div class="column-content">
@@ -98,7 +98,7 @@
             <div class="column-content">
               <label for="zip" class="label text">Zip code</label>
               <br>
-              <input type="text" class="input zipcode" id="zip" name="zip" autocomplete="off" placeholder="Enter zipcode..." required>
+              <input type="text" class="input zipcode" id="zip" name="zip" autocomplete="off" placeholder="Your zipcode.." required>
               <error-output class="zip-error"></error-output>
             </div>
           </div>
@@ -113,7 +113,10 @@
     </form>
   </div>
 
+  <!-------------------- UC-4 ------------------>
   <script src="addressBookForm.js"></script>
+  <script src="addressBookHome.js"></script>
   <script src="contact_data.js"></script>
+  <script src="site_properties.js"></script>
 </body>
 </html>
