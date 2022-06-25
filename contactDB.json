@@ -1,0 +1,41 @@
+{
+    "ContactDB": [
+      {
+        "id": 1,
+        "_name": "vamshi",
+        "_phoneNumber": "91 9857788777",
+        "_address": "Kengeri",
+        "_city": "Bangalore",
+        "_state": "Karnataka",
+        "_zip": "756677"
+      },
+      {
+        "id": 2,
+        "_name": "Krishna",
+        "_phoneNumber": "91 87777665555",
+        "_address": "Whitefield",
+        "_city": "Bangalore",
+        "_state": "Larnataka",
+        "_zip": "799988"
+      },
+      {
+        "id": 3,
+        "_name": "Ajay",
+        "_phoneNumber": "91 75993334455",
+        "_address": "jayanagar",
+        "_city": "Bangalore",
+        "_state": "Karnataka",
+        "_zip": "5666655"
+      },
+      {
+        "id": 4,
+        "_name": "Ashok",
+        "_phoneNumber": "91 8887776522",
+        "_address": "Jubliee hills",
+        "_city": "Hyderabad",
+        "_state": "Andhra Pradesh",
+        "_zip": "766677"
+      },
+      
+    ]
+  }
